@@ -1,10 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace CleanArchitectureTemplate.Core.Entities.Base
 {
     public abstract class BaseEntity
     {
-        [JsonProperty(PropertyName = "id")]
+        [JsonPropertyName("id")]
         public virtual string Id { get; set; }
     }
 }

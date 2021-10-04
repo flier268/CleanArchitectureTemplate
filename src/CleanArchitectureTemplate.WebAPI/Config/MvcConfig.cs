@@ -1,4 +1,5 @@
-﻿using CleanArchitectureTemplate.WebAPI.Infrastructure.Filters;
+﻿using System.Text.Json.Serialization;
+using CleanArchitectureTemplate.WebAPI.Infrastructure.Filters;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using ZymLabs.NSwag.FluentValidation.AspNetCore;
@@ -20,10 +21,10 @@ namespace CleanArchitectureTemplate.WebAPI.Config
             services.AddControllers(options =>
                         // handle exceptions thrown by an action
                         options.Filters.Add(new ApiExceptionFilterAttribute()))
-                    .AddNewtonsoftJson(options =>
+                    .AddJsonOptions(options =>
                     {
                         // Serilize enum in string
-                        options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+                        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                     })
                     .AddFluentValidation(options =>
                     {
