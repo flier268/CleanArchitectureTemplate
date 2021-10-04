@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using CleanArchitectureTemplate.Core.Interfaces.Storage;
 using AutoMapper;
+using CleanArchitectureTemplate.Core.Interfaces.Storage;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Http;

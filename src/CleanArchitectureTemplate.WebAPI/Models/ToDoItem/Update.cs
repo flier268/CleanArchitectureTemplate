@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using CleanArchitectureTemplate.Core.Exceptions;
 using CleanArchitectureTemplate.Core.Interfaces;
 using CleanArchitectureTemplate.Core.Specifications;
-using AutoMapper;
 using FluentValidation;
 using MediatR;
 

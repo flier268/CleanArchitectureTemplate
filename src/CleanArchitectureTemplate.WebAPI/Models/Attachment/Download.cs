@@ -2,9 +2,9 @@
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using CleanArchitectureTemplate.Core.Exceptions;
 using CleanArchitectureTemplate.Core.Interfaces.Storage;
-using AutoMapper;
 using FluentValidation;
 using MediatR;
 
