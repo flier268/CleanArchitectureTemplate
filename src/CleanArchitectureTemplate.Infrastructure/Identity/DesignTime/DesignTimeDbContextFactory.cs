@@ -22,7 +22,8 @@ namespace CleanArchitectureTemplate.Infrastructure.Identity.DesignTime
             IConfigurationBuilder builder =
                 new ConfigurationBuilder()
                     .SetBasePath(path)
-                    .AddJsonFile("appsettings.json");
+                    .AddJsonFile("appsettings.json")
+                    .AddJsonFile("appsettings.Development.json");
 
             IConfigurationRoot config = builder.Build();
 
